@@ -1,0 +1,33 @@
+import { Event } from './event.entity';
+import { JoinRequest } from './join-request.entity';
+import { Swipe } from './swipe.entity';
+import { Message } from './message.entity';
+import { Notification } from './notification.entity';
+import { CheckIn } from './check-in.entity';
+export declare class User {
+    id: string;
+    fullName: string;
+    username: string;
+    phone: string;
+    bio: string;
+    avatarUrl: string;
+    idProofUrl: string;
+    isVerified: boolean;
+    isProfileComplete: boolean;
+    latitude: number;
+    longitude: number;
+    city: string;
+    appearance: string;
+    locationEnabled: boolean;
+    showProfileInPartyMode: boolean;
+    pushNotificationsEnabled: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+    hostedEvents: Event[];
+    joinRequests: JoinRequest[];
+    swipesMade: Swipe[];
+    swipesReceived: Swipe[];
+    messagesSent: Message[];
+    notifications: Notification[];
+    checkIns: CheckIn[];
+}

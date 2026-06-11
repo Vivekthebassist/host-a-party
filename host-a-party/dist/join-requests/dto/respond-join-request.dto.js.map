@@ -1,0 +1,1 @@
+{"version":3,"file":"respond-join-request.dto.js","sourceRoot":"","sources":["../../../src/join-requests/dto/respond-join-request.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,qDAAyC;AACzC,4EAAuE;AAEvE,MAAa,qBAAqB;CAKjC;AALD,sDAKC;AADC;IAHC,IAAA,wBAAM,EAAC,CAAC,uCAAiB,CAAC,QAAQ,EAAE,uCAAiB,CAAC,QAAQ,CAAC,EAAE;QAChE,OAAO,EAAE,qCAAqC;KAC/C,CAAC;;qDACwB"}
