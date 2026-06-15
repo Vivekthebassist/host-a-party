@@ -87,6 +87,7 @@ exports.AppModule = AppModule = __decorate([
                     username: config.get('DB_USERNAME'),
                     password: config.get('DB_PASSWORD'),
                     database: config.get('DB_NAME'),
+                    ssl: true,
                     entities: [user_entity_1.User, event_entity_1.Event, join_request_entity_1.JoinRequest, swipe_entity_1.Swipe, match_entity_1.Match, message_entity_1.Message, notification_entity_1.Notification, check_in_entity_1.CheckIn],
                     synchronize: true,
                     logging: ['error', 'warn'],

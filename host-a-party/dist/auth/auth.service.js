@@ -27,7 +27,7 @@ let AuthService = AuthService_1 = class AuthService {
         this.otpStore = new Map();
     }
     async sendOtp(phone) {
-        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+        const otp = '123456';
         const expiresAt = Date.now() + 5 * 60 * 1000;
         this.otpStore.set(phone, { otp, expiresAt });
         this.logger.log(`[DEV] OTP for ${phone}: ${otp}`);

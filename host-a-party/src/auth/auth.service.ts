@@ -18,8 +18,9 @@ export class AuthService {
   ) {}
 
   async sendOtp(phone: string): Promise<{ message: string }> {
+    // DEV ONLY: hardcoded OTP for testing. Replace with random OTP + SMS provider in production.
     const otp = '123456';
-    const expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
+    const expiresAt = Date.now() + 5 * 60 * 1000;
 
     this.otpStore.set(phone, { otp, expiresAt });
 

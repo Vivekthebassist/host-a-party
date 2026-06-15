@@ -42,6 +42,8 @@ import { GatewayModule } from './gateway/gateway.module';
         username: config.get('DB_USERNAME'),
         password: config.get('DB_PASSWORD'),
         database: config.get('DB_NAME'),
+
+        ssl: true,
         entities: [User, Event, JoinRequest, Swipe, Match, Message, Notification, CheckIn],
         synchronize: true,
         logging: ['error', 'warn'],
