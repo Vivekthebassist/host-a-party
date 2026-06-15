@@ -16,7 +16,9 @@ async function bootstrap() {
     }),
   );
 
-  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
+  app.useGlobalInterceptors(
+    new ClassSerializerInterceptor(app.get(Reflector)),
+  );
 
   app.enableCors();
 
@@ -30,8 +32,12 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('docs', app, document);
 
-  await app.listen(3000);
-  console.log('Host a Party API running on http://localhost:3000');
-  console.log('Swagger docs at http://localhost:3000/docs');
+  const port = process.env.PORT || 3000;
+
+  await app.listen(port);
+
+  console.log(`Host a Party API running on port ${port}`);
+  console.log(`Swagger docs available at /docs`);
 }
+
 bootstrap();
